@@ -1,0 +1,96 @@
+* {
+    margin:0%;
+    padding:0%;
+}
+
+html body {
+    font-family: 'Raleway', sans-serif;
+    background-image: linear-gradient(to bottom,white,white,rgb(234, 229, 229));
+    animation-name: aparecer;
+    animation-iteration-count: initial;
+    animation-duration: 3s;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2em;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+p.categoryLink {
+    position: absolute;
+    color: white;
+    left: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    
+}
+
+  .ig {
+    width: 47px;
+}
+
+.container-fluid {
+    flex-direction: row-reverse;
+}
+
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    
+}
+
+.btn btn-primary{
+    background-color: #888c93 !important;
+}
+
+
+p {
+    animation-name: boton;
+    animation-iteration-count:infinite;
+    animation-duration: 4s;
+}
+
+@keyframes boton {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+        font-weight: bold;
+        color:black;
+    }
+}
+
+.logo{
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 1023px) {
+ 
+    img {
+        width: 100%;
+    }
+
+    .container-fluid {
+        flex-direction: row;
+    }
+
+    footer {
+        font-size: 0.6em;
+    }
+
+    .logo {
+        width: 80%;
+    }
+}
+
+
+
