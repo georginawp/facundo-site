@@ -3,20 +3,22 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Facundo Pe&ntilde;a Photography</title>
+        <title>Facundo Peña Photography I Fine Art I Photo</title>
+        <meta name="description" content="En cada disparo comienza mi análisis. Fotografiar me abre las puertas al mundo interior de cada individuo." />
+        <meta name="keywords" content="photography,fotografía,ph,fotografo,facundo peña, penia,subrrealismo,prensa"/>
         <link rel= 'icon' href="iconos_img/favicon.png">
-        
-
-        <link rel="stylesheet" href="css/photo.css">
+        <link rel="stylesheet" href="style/photo.css">
 
         <!-- bootstrap-->
         <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-        <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript" ></script>
 
         <!-- font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,500;1,100;1,200;1,400&family=Raleway:wght@100;200&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+        <script src="js/photo.js" type="text/javascript" ></script>
     </head>
     <body>
         <div id="grilla">
@@ -46,10 +48,12 @@
                   </div>
                 </div>
             </nav>
-            <div class="imagen">
-                <img src="img/MG_1163.jpg">
+            <div class="image">
+                <img id="imageTag">
             </div> 
-            <a class='float-button'href='fineArt.html'>Volver</a>
+            <a href='fineArt.html'>
+            <button type="button" class="btn btn-dark" style="margin-left:auto">Volver</button>
+            </a>
             <footer> &copy;Facundo Pe&ntilde;a 2022 | Powered and designed by DyM Solutions </footer>   
         </div>
     </body>

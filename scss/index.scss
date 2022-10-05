@@ -1,0 +1,100 @@
+@import "main";
+
+html {
+    body{
+        #grilla {
+            display: grid;
+            grid-template-areas:
+            "header header"
+            "logo logo"
+            "imgPrincipal imgPrincipal"
+            "subtitulo subtitulo"
+            "imgSurrealismo imgPrensa"
+            "imgSurrealismo imgViajes"
+            "footer footer";
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 50px;
+            grid-row-gap: 2em;
+            padding: 1em 2em;
+        }
+        
+        nav {
+            grid-area: header;
+        }
+        
+        .logo {
+            grid-area: logo;
+            text-align: center;
+        }
+        
+        .imgPrincipal {
+            grid-area: imgPrincipal;
+            filter: drop-shadow(2px 4px 6px black);
+         }
+        
+        .subtitulo {
+            grid-area: subtitulo;
+        }
+        
+        .imgSurrealismo {
+            grid-area: imgSurrealismo;
+            
+        }
+        
+        .imgPrensa {
+            grid-area: imgPrensa;
+        }
+        
+        
+        .imgViajes {
+            grid-area: imgViajes;
+        }
+        
+        .imgContainer {
+            position: relative;
+        
+           
+        }
+        
+        footer {
+            grid-area: footer;
+         }
+        
+        h3 {
+            font-weight: bold;
+        }
+
+       
+        
+        @media only screen and (max-width: $responsiveBreakpoint) {
+         
+            #grilla {
+                display:grid;
+                grid-template-areas:
+                "header"
+                "logo"
+                "imgPrincipal"
+                "subtitulo"
+                "imgPrensa"
+                "imgViajes"
+                "imgSurrealismo"
+                "footer";
+                grid-template-rows: 1fr;
+                grid-template-columns: 1fr;
+                grid-column-gap: 0;
+                grid-row-gap: 1em;
+                padding: 0;
+            }
+        
+            img {
+                width: 100%;
+            }
+        
+            .logo {
+                width: 80%;
+            }
+        }
+    }
+}
+

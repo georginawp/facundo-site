@@ -1,0 +1,55 @@
+@import "main";
+
+html {
+    body {
+        #grilla {
+            display:grid;
+            grid-template-areas:
+            "header"
+            "image"
+            "button"
+            "footer";
+            grid-template-rows: 1fr;
+            grid-row-gap: 2em;
+            padding: 1em 2em;
+           
+        }
+        
+        nav {
+            grid-area:header;
+        }
+        
+        .image {
+            grid-area: image;
+            text-align: center;
+            filter: drop-shadow(0 8px 12px rgba(11, 0, 0, 3.7));
+           
+        }
+        
+        .btn {
+            grid-area: button;
+            margin-left: 11%;
+
+        }
+        
+        footer {
+            grid-area: footer;
+            margin-top: 50px;   
+        }
+        
+        img {
+            width: 65%;
+            text-align: center;
+        }
+        
+        @media only screen and (max-width: $responsiveBreakpoint) {
+            img {
+                width: 100%;
+            }
+        }       
+    }
+}
+
+
+
+

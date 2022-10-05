@@ -1,0 +1,130 @@
+* {
+  margin: 0%;
+  padding: 0%; }
+
+html body {
+  min-height: 100vh;
+  font-family: "Raleway", sans-serif !important;
+  background-image: linear-gradient(to bottom, white, white, #eae5e5);
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 2em;
+  animation-name: aparecer;
+  animation-iteration-count: initial;
+  animation-duration: 3s; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  html body .ig {
+    width: 47px; }
+  html body .container-fluid {
+    flex-direction: row-reverse; }
+  html body footer {
+    text-align: center; }
+  @media only screen and (max-width: 1023px) {
+    html body .container-fluid {
+      flex-direction: row; }
+    html body footer {
+      font-size: 0.6em; } }
+
+html body #grilla {
+  height: 100%;
+  display: grid;
+  grid-template-areas: "header" "titulo" "subtitulo1" "imgSurrealismo" "subtitulo2" "imgPrensa" "subtitulo3" "imgViajes" "footer";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-column-gap: 102px;
+  grid-row-gap: 2em;
+  padding: 1em 2em; }
+
+html body nav {
+  grid-area: header; }
+
+html body h1 {
+  grid-area: titulo;
+  font-size: 4rem;
+  margin-top: 30px;
+  text-align: left; }
+
+html body .subtitulo1 {
+  grid-area: subtitulo1; }
+
+html body .imgSurrealismo {
+  grid-area: imgSurrealismo;
+  width: 100%;
+  overflow-x: scroll;
+  height: 450px;
+  white-space: nowrap; }
+
+html body .imgSurrealismo img {
+  width: 300px; }
+
+html body .subtitulo2 {
+  grid-area: subtitulo2; }
+
+html body .imgPrensa {
+  grid-area: imgPrensa;
+  width: 100%;
+  overflow-x: scroll;
+  height: 300px;
+  white-space: nowrap; }
+
+html body .imgPrensa img {
+  width: 400px; }
+
+html body .subtitulo3 {
+  grid-area: subtitulo3; }
+
+html body .imgViajes {
+  grid-area: imgViajes;
+  width: 100%;
+  overflow-x: scroll;
+  height: 300px;
+  white-space: nowrap; }
+
+html body .imgViajes img {
+  width: 400px; }
+
+html body img:not(.ig) {
+  transition: 1.5s ease;
+  -moz-transition: 1.5s ease;
+  /* Firefox */
+  -webkit-transition: 1.5s ease;
+  /* Chrome - Safari */
+  -o-transition: 1.5s ease;
+  /* Opera */
+  filter: drop-shadow(2px 4px 6px black); }
+  html body img:not(.ig):hover {
+    transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    /* Firefox */
+    -webkit-transform: scale(1.1);
+    /* Chrome - Safari */
+    -o-transform: scale(1.1);
+    /* Opera */
+    -ms-transform: scale(1.1);
+    /* IE9 */ }
+
+html body img:hover {
+  transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  /* Firefox */
+  -webkit-transform: scale(1.1);
+  /* Chrome - Safari */
+  -o-transform: scale(1.1);
+  /* Opera */
+  -ms-transform: scale(1.1);
+  /* IE9 */ }
+
+html body footer {
+  grid-area: footer; }
+
+@media only screen and (max-width: 1023px) {
+  html body #grilla {
+    grid-template-areas: "header" "titulo" "subtitulo1" "imgSurrealismo" "subtitulo2" "imgPrensa" "subtitulo3" "imgViajes" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 0; } }

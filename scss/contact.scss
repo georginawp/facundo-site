@@ -1,0 +1,97 @@
+@import "main";
+
+html{
+    body{
+        #grilla {
+            display: grid;
+            grid-template-areas: 
+            "header header"
+            "titulo titulo"
+            "subtitulo subtitulo"
+            "formulario seccion"
+            "footer footer";
+            grid-template-columns: 1fr 1fr;
+            padding: 1em 2em;
+            column-gap: 5em;
+        }
+        
+        nav {
+            grid-area: header;
+        }
+        
+        h1 {
+            grid-area: titulo;
+            margin-top: 40px;
+            font-size: 4rem;
+        }
+        
+        .subtitulo {
+            grid-area: subtitulo;
+        }
+        
+        form {
+            grid-area: formulario;
+        }
+        
+        .infoContact {
+            grid-area: seccion;
+        }
+        
+        input {
+            width:80%;
+        }
+        
+        textarea {
+            height: 12em;
+        }
+        
+        .infoContact {
+            display: flex;
+            text-align: right;
+            align-items: center;
+        }
+        
+        .btn {
+            background-color: #888c93 !important;
+            border: black !important;
+            cursor:pointer;
+        }
+        
+        footer {
+            grid-area: footer;
+        }
+        
+        @media only screen and (max-width: $responsiveBreakpoint) {
+            #grilla {
+                grid-template-areas:
+                "header"
+                "titulo"
+                "subtitulo"
+                "formulario"
+                "seccion" 
+                "footer"; 
+                grid-template-columns:1fr;
+                grid-template-rows: 1fr;
+                padding: 0;
+            }
+
+            .infoContact {
+                margin-top: 2em;
+                text-align: left;
+            }
+        
+            .infoContact p {
+                font-size: 0.8em;
+                margin: 0.5em 0 0 0;
+            }
+        
+            h1 {
+                font-size: 2em;
+            }
+        
+            h2 {
+                font-size: 1em;
+            }
+        }
+    }
+}
