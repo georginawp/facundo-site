@@ -80,7 +80,5 @@ html body h3 {
     grid-column-gap: 0;
     grid-row-gap: 1em;
     padding: 0; }
-  html body img {
-    width: 100%; }
-  html body .logo {
+  html body .logo img {
     width: 80%; } }
