@@ -24,21 +24,17 @@ html body {
     flex-direction: row-reverse; }
   html body footer {
     text-align: center; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 1024px) {
     html body .container-fluid {
       flex-direction: row; }
     html body footer {
       font-size: 0.6em; } }
 
 html body #grilla {
-  height: 100%;
-  display: grid;
-  grid-template-areas: "header header" "titulo titulo" "subtitulo1 subtitulo1" "texto1 imagen1" "subtitulo2 subtitulo2" "imagen2 texto2" "footer footer";
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 102px;
-  grid-row-gap: 2em;
-  padding: 1em 2em; }
+  grid-template-areas: "header" "titulo" "subtitulo1" "imagen1" "texto1"  "subtitulo2" "imagen2" "texto2" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  padding: 0; }
 
 html body nav {
   grid-area: header; }
@@ -92,9 +88,13 @@ html body p {
 html body footer {
   grid-area: footer; }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (min-width: 1024px) {
   html body #grilla {
-    grid-template-areas: "header" "titulo" "subtitulo1" "imagen1" "texto1"  "subtitulo2" "imagen2" "texto2" "footer";
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    padding: 0; } }
+    height: 100%;
+    display: grid;
+    grid-template-areas: "header header" "titulo titulo" "subtitulo1 subtitulo1" "texto1 imagen1" "subtitulo2 subtitulo2" "imagen2 texto2" "footer footer";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 102px;
+    grid-row-gap: 2em;
+    padding: 1em 2em; } }

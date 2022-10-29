@@ -24,7 +24,7 @@ html body {
     flex-direction: row-reverse; }
   html body footer {
     text-align: center; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 1024px) {
     html body .container-fluid {
       flex-direction: row; }
     html body footer {
@@ -32,12 +32,12 @@ html body {
 
 html body #grilla {
   display: grid;
-  grid-template-areas: "header header" "logo logo" "imgPrincipal imgPrincipal" "subtitulo subtitulo" "imgSurrealismo imgPrensa" "imgSurrealismo imgViajes" "footer footer";
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 50px;
-  grid-row-gap: 2em;
-  padding: 1em 2em; }
+  grid-template-areas: "header" "logo" "imgPrincipal" "subtitulo" "imgPrensa" "imgViajes" "imgSurrealismo" "footer";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 1em;
+  padding: 0; }
 
 html body nav {
   grid-area: header; }
@@ -45,6 +45,9 @@ html body nav {
 html body .logo {
   grid-area: logo;
   text-align: center; }
+
+html body .logo img {
+  width: 80%; }
 
 html body .imgPrincipal {
   grid-area: imgPrincipal;
@@ -71,14 +74,25 @@ html body footer {
 html body h3 {
   font-weight: bold; }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
+  html body .ih-item.square.effect12.left_to_right a .info {
+    transform: translate(0px, 0px); }
+  html body .ih-item.square.effect12 a .info {
+    visibility: visible;
+    opacity: 1; }
+  html body .ih-item.square.effect12.left_to_right a .info h3 {
+    transform: translateY(0px); }
+  html body .ih-item.square.effect12.left_to_right a .info p {
+    transform: translateX(0px) rotate(0deg); } }
+
+@media only screen and (min-width: 1024px) {
   html body #grilla {
     display: grid;
-    grid-template-areas: "header" "logo" "imgPrincipal" "subtitulo" "imgPrensa" "imgViajes" "imgSurrealismo" "footer";
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-    grid-column-gap: 0;
-    grid-row-gap: 1em;
-    padding: 0; }
+    grid-template-areas: "header header" "logo logo" "imgPrincipal imgPrincipal" "subtitulo subtitulo" "imgSurrealismo imgPrensa" "imgSurrealismo imgViajes" "footer footer";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 2em;
+    padding: 1em 2em; }
   html body .logo img {
-    width: 80%; } }
+    width: 50%; } }

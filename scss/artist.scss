@@ -3,25 +3,24 @@
 html {
   body {
     #grilla {
-      height: 100%;
-      display:grid;
       grid-template-areas:
-      "header header"
-      "titulo titulo"
-      "subtitulo1 subtitulo1"
-      "texto1 imagen1"
-      "subtitulo2 subtitulo2"
-      "imagen2 texto2"
-      "footer footer";
-      grid-template-rows: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 102px;
-      grid-row-gap: 2em;
-      padding: 1em 2em; 
-    }
+      "header"
+      "titulo"
+      "subtitulo1"
+      "imagen1"
+      "texto1" 
+      "subtitulo2"
+      "imagen2"
+      "texto2"
+      "footer"; 
+      grid-template-columns:1fr;
+      grid-template-rows: 1fr;
+      padding: 0;
+    } 
 
     nav {
       grid-area: header;
+
     }
   
     h1 {
@@ -88,24 +87,26 @@ html {
       grid-area: footer;
     }
     
-    @media only screen and (max-width: $responsiveBreakpoint) {
+    @media only screen and (min-width: $responsiveBreakpoint) {
       #grilla {
-          grid-template-areas:
-          "header"
-          "titulo"
-          "subtitulo1"
-          "imagen1"
-          "texto1" 
-          "subtitulo2"
-          "imagen2"
-          "texto2"
-          "footer"; 
-          grid-template-columns:1fr;
-          grid-template-rows: 1fr;
-          padding: 0;
+        height: 100%;
+        display:grid;
+        grid-template-areas:
+        "header header"
+        "titulo titulo"
+        "subtitulo1 subtitulo1"
+        "texto1 imagen1"
+        "subtitulo2 subtitulo2"
+        "imagen2 texto2"
+        "footer footer";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 102px;
+        grid-row-gap: 2em;
+        padding: 1em 2em; 
+      }
         } 
     }
   }
-}
 
 

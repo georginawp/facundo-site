@@ -24,7 +24,7 @@ html body {
     flex-direction: row-reverse; }
   html body footer {
     text-align: center; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 1024px) {
     html body .container-fluid {
       flex-direction: row; }
     html body footer {
@@ -54,9 +54,9 @@ html body footer {
   margin-top: 50px; }
 
 html body img {
-  width: 65%;
+  width: 100%;
   text-align: center; }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (min-width: 1024px) {
   html body img {
-    width: 100%; } }
+    width: 65%; } }

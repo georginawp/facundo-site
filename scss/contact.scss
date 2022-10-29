@@ -3,18 +3,18 @@
 html{
     body{
         #grilla {
-            display: grid;
-            grid-template-areas: 
-            "header header"
-            "titulo titulo"
-            "subtitulo subtitulo"
-            "formulario seccion"
-            "footer footer";
-            grid-template-columns: 1fr 1fr;
-            padding: 1em 2em;
-            column-gap: 5em;
+            grid-template-areas:
+            "header"
+            "titulo"
+            "subtitulo"
+            "formulario"
+            "seccion" 
+            "footer"; 
+            grid-template-columns:1fr;
+            grid-template-rows: 1fr;
+            padding: 0;
         }
-        
+
         nav {
             grid-area: header;
         }
@@ -22,7 +22,11 @@ html{
         h1 {
             grid-area: titulo;
             margin-top: 40px;
-            font-size: 4rem;
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1em;
         }
         
         .subtitulo {
@@ -47,8 +51,10 @@ html{
         
         .infoContact {
             display: flex;
-            text-align: right;
+            text-align: left;
             align-items: center;
+            margin-top: 2em;
+            font-size: 18px;
         }
         
         .btn {
@@ -61,36 +67,40 @@ html{
             grid-area: footer;
         }
         
-        @media only screen and (max-width: $responsiveBreakpoint) {
-            #grilla {
-                grid-template-areas:
-                "header"
-                "titulo"
-                "subtitulo"
-                "formulario"
-                "seccion" 
-                "footer"; 
-                grid-template-columns:1fr;
-                grid-template-rows: 1fr;
-                padding: 0;
-            }
 
+        .infoContact p {
+            font-size: 0.8em;
+            margin: 0.5em 0 0 0;
+        }
+
+        @media only screen and (min-width: $responsiveBreakpoint) {
+    
+            #grilla {
+                display: grid;
+                grid-template-areas: 
+                "header header"
+                "titulo titulo"
+                "subtitulo subtitulo"
+                "formulario seccion"
+                "footer footer";
+                grid-template-columns: 1fr 1fr;
+                padding: 1em 2em;
+                column-gap: 5em;
+            }
+            
             .infoContact {
                 margin-top: 2em;
-                text-align: left;
+                text-align: right;
             }
         
-            .infoContact p {
-                font-size: 0.8em;
-                margin: 0.5em 0 0 0;
-            }
+            
         
             h1 {
-                font-size: 2em;
+                font-size: 4rem;
             }
         
             h2 {
-                font-size: 1em;
+                font-size: calc(1.325rem + .9vw);
             }
         }
     }

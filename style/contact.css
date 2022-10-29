@@ -24,18 +24,17 @@ html body {
     flex-direction: row-reverse; }
   html body footer {
     text-align: center; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 1024px) {
     html body .container-fluid {
       flex-direction: row; }
     html body footer {
       font-size: 0.6em; } }
 
 html body #grilla {
-  display: grid;
-  grid-template-areas: "header header" "titulo titulo" "subtitulo subtitulo" "formulario seccion" "footer footer";
-  grid-template-columns: 1fr 1fr;
-  padding: 1em 2em;
-  column-gap: 5em; }
+  grid-template-areas: "header" "titulo" "subtitulo" "formulario" "seccion"  "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  padding: 0; }
 
 html body nav {
   grid-area: header; }
@@ -43,7 +42,10 @@ html body nav {
 html body h1 {
   grid-area: titulo;
   margin-top: 40px;
-  font-size: 4rem; }
+  font-size: 2em; }
+
+html body h2 {
+  font-size: 1em; }
 
 html body .subtitulo {
   grid-area: subtitulo; }
@@ -62,8 +64,10 @@ html body textarea {
 
 html body .infoContact {
   display: flex;
-  text-align: right;
-  align-items: center; }
+  text-align: left;
+  align-items: center;
+  margin-top: 2em;
+  font-size: 18px; }
 
 html body .btn {
   background-color: #888c93 !important;
@@ -73,19 +77,21 @@ html body .btn {
 html body footer {
   grid-area: footer; }
 
-@media only screen and (max-width: 1023px) {
+html body .infoContact p {
+  font-size: 0.8em;
+  margin: 0.5em 0 0 0; }
+
+@media only screen and (min-width: 1024px) {
   html body #grilla {
-    grid-template-areas: "header" "titulo" "subtitulo" "formulario" "seccion"  "footer";
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    padding: 0; }
+    display: grid;
+    grid-template-areas: "header header" "titulo titulo" "subtitulo subtitulo" "formulario seccion" "footer footer";
+    grid-template-columns: 1fr 1fr;
+    padding: 1em 2em;
+    column-gap: 5em; }
   html body .infoContact {
     margin-top: 2em;
-    text-align: left; }
-  html body .infoContact p {
-    font-size: 0.8em;
-    margin: 0.5em 0 0 0; }
+    text-align: right; }
   html body h1 {
-    font-size: 2em; }
+    font-size: 4rem; }
   html body h2 {
-    font-size: 1em; } }
+    font-size: calc(1.325rem + .9vw); } }

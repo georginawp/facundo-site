@@ -24,21 +24,17 @@ html body {
     flex-direction: row-reverse; }
   html body footer {
     text-align: center; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 1024px) {
     html body .container-fluid {
       flex-direction: row; }
     html body footer {
       font-size: 0.6em; } }
 
 html body #grilla {
-  height: 100%;
-  display: grid;
   grid-template-areas: "header" "titulo" "subtitulo1" "imgSurrealismo" "subtitulo2" "imgPrensa" "subtitulo3" "imgViajes" "footer";
-  grid-template-rows: 1fr;
   grid-template-columns: 1fr;
-  grid-column-gap: 102px;
-  grid-row-gap: 2em;
-  padding: 1em 2em; }
+  grid-template-rows: 1fr;
+  padding: 0; }
 
 html body nav {
   grid-area: header; }
@@ -122,9 +118,13 @@ html body img:hover {
 html body footer {
   grid-area: footer; }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (mim-width: 1024px) {
   html body #grilla {
+    height: 100%;
+    display: grid;
     grid-template-areas: "header" "titulo" "subtitulo1" "imgSurrealismo" "subtitulo2" "imgPrensa" "subtitulo3" "imgViajes" "footer";
-    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    padding: 0; } }
+    grid-template-columns: 1fr;
+    grid-column-gap: 102px;
+    grid-row-gap: 2em;
+    padding: 1em 2em; } }

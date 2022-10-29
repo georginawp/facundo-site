@@ -2,9 +2,7 @@
 
 html {
     body{
-        #grilla { 
-            height: 100%;
-            display:grid;
+        #grilla {
             grid-template-areas:
             "header"
             "titulo"
@@ -15,12 +13,10 @@ html {
             "subtitulo3"
             "imgViajes"
             "footer";
+            grid-template-columns:1fr;
             grid-template-rows: 1fr;
-            grid-template-columns: 1fr;
-            grid-column-gap: 102px;
-            grid-row-gap: 2em;
-            padding: 1em 2em;   
-        }
+            padding: 0;
+        } 
         
         nav {
             grid-area: header;
@@ -109,8 +105,10 @@ html {
             grid-area: footer;
         }
         
-        @media only screen and (max-width: $responsiveBreakpoint) {
-            #grilla {
+        @media only screen and (mim-width: $responsiveBreakpoint) {
+            #grilla { 
+                height: 100%;
+                display:grid;
                 grid-template-areas:
                 "header"
                 "titulo"
@@ -121,10 +119,12 @@ html {
                 "subtitulo3"
                 "imgViajes"
                 "footer";
-                grid-template-columns:1fr;
                 grid-template-rows: 1fr;
-                padding: 0;
-            } 
+                grid-template-columns: 1fr;
+                grid-column-gap: 102px;
+                grid-row-gap: 2em;
+                padding: 1em 2em;   
+            }
         }    
     }
 }

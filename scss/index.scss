@@ -3,22 +3,26 @@
 html {
     body{
         #grilla {
-            display: grid;
+            display:grid;
             grid-template-areas:
-            "header header"
-            "logo logo"
-            "imgPrincipal imgPrincipal"
-            "subtitulo subtitulo"
-            "imgSurrealismo imgPrensa"
-            "imgSurrealismo imgViajes"
-            "footer footer";
-            grid-template-rows: 1fr 1fr;
-            grid-template-columns: 1fr 1fr;
-            grid-column-gap: 50px;
-            grid-row-gap: 2em;
-            padding: 1em 2em;
+            "header"
+            "logo"
+            "imgPrincipal"
+            "subtitulo"
+            "imgPrensa"
+            "imgViajes"
+            "imgSurrealismo"
+            "footer";
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+            grid-row-gap: 1em;
+            padding: 0;
+
+            
         }
-        
+
+
         nav {
             grid-area: header;
         }
@@ -26,6 +30,10 @@ html {
         .logo {
             grid-area: logo;
             text-align: center;
+        }
+
+        .logo img {
+            width: 80%;
         }
         
         .imgPrincipal {
@@ -53,8 +61,6 @@ html {
         
         .imgContainer {
             position: relative;
-        
-           
         }
         
         footer {
@@ -65,30 +71,47 @@ html {
             font-weight: bold;
         }
 
-       
         
         @media only screen and (max-width: $responsiveBreakpoint) {
+            // on mobile we show image with hover effect
+            .ih-item.square.effect12.left_to_right a .info {
+                transform: translate(0px, 0px);
+            }
+            .ih-item.square.effect12 a .info {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .ih-item.square.effect12.left_to_right a .info h3 {
+                transform: translateY(0px);
+            }
+
+            .ih-item.square.effect12.left_to_right a .info p {
+                transform: translateX(0px) rotate(0deg);
+            }
+        }
+        
+        @media only screen and (min-width: $responsiveBreakpoint) {
          
             #grilla {
-                display:grid;
+                display: grid;
                 grid-template-areas:
-                "header"
-                "logo"
-                "imgPrincipal"
-                "subtitulo"
-                "imgPrensa"
-                "imgViajes"
-                "imgSurrealismo"
-                "footer";
-                grid-template-rows: 1fr;
-                grid-template-columns: 1fr;
-                grid-column-gap: 0;
-                grid-row-gap: 1em;
-                padding: 0;
+                "header header"
+                "logo logo"
+                "imgPrincipal imgPrincipal"
+                "subtitulo subtitulo"
+                "imgSurrealismo imgPrensa"
+                "imgSurrealismo imgViajes"
+                "footer footer";
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 50px;
+                grid-row-gap: 2em;
+                padding: 1em 2em;
             }
         
             .logo img {
-                width: 80%;
+                width: 50%;
             }
         }
     }
