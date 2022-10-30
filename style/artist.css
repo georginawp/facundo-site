@@ -31,9 +31,11 @@ html body {
       font-size: 0.6em; } }
 
 html body #grilla {
+  display: grid;
   grid-template-areas: "header" "titulo" "subtitulo1" "imagen1" "texto1"  "subtitulo2" "imagen2" "texto2" "footer";
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  grid-row-gap: 1em;
   padding: 0; }
 
 html body nav {
